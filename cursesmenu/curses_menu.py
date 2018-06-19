@@ -182,6 +182,7 @@ class CursesMenu(object):
     def _main_loop(self, scr):
         if scr is not None:
             CursesMenu.stdscr = scr
+        CursesMenu.stdscr.clear()
         self.screen = curses.newpad(len(self.items) + 6, CursesMenu.stdscr.getmaxyx()[1])
         self._set_up_colors()
         curses.curs_set(0)
